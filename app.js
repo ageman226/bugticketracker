@@ -22,14 +22,6 @@ app.use(urlencoded({ extended: true }));
 app.use('/test', testRoute);
 app.use('/api', api)
 
-// data = {
-//   ticket_id: 1,
-//   user_id: 1,
-//   message: "We are working on this issue as of right now"
-// }
-
-// postData.insertTicketCommentData(data)
-
 app.get('/', async function (req, res) {
   const result = await datafetch.testQuery();
   console.log(result);
